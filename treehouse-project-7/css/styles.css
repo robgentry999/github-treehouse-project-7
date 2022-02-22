@@ -1,0 +1,46 @@
+/*main styles*/
+*{
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.icon {
+max-height: 25px;
+}
+h1{
+    font-size: 20px;
+}
+h3{
+    font-size: 15px;
+}
+header{
+    padding: 15px;
+    background-color: blueviolet;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.title{
+    padding: 10px;
+}
+.dashboard-title{
+    margin-bottom: 15px;
+}
+#main-nav{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+}
+#traffic-nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.nav-icon,.traffic-icon{
+    margin: 5px;
+    padding: 5px 15px;
+}
+
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- --> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <script type="text/javascript" src="js/app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js" defer></script>
+    <title>Project 7</title>
+</head>
+<body>
+<!--header     --> 
+<header>
+<h1>WebApp&trade;</h1>
+<img class="icon" src="resources/svgs/bell.svg" alt="notifications">
+<img class="icon" src="resources/images/member-1.jpg" alt="member-1">
+<h3>Student Name</h3>
+</header>
+<!--main navigation --> 
+<div id="main-nav">
+<img class="icon nav-icon" src="resources/svgs/home.svg" alt="home">
+<img class="icon nav-icon" src="resources/svgs/bar-chart.svg" alt="bar-chart">
+<img class="icon nav-icon" src="resources/svgs/members.svg" alt="members">
+<img class="icon nav-icon" src="resources/svgs/settings.svg" alt="settings">
+</div>
+<!--Dashboard --> 
+<h3 class="dashboard-title title">Dashboard</h3>
+<h4 class="alert title">Alert: You have unread messages</h4>
+
+<h4 class="traffic-title title">Traffic</h4>
+<div id="traffic-nav">
+<h5 class="traffic-icon">Hourly</h5>
+<h5 class="traffic-icon">Daily</h5>
+<h5 class="traffic-icon">Weekly</h5>
+<h5 class="traffic-icon">Monthly</h5>
+</div>
+<canvas id="line-chart" width="400" height="400"></canvas>
+
+
+</body>
+</html>
