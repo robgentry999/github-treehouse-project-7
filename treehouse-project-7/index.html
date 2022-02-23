@@ -9,8 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" 
+    integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"> </script>
     <script type="text/javascript" src="js/app.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js" defer></script>
     <title>Project 7</title>
 </head>
 <body>
@@ -30,7 +33,7 @@
 </div>
 <!--Dashboard --> 
 <h3 class="dashboard-title title">Dashboard</h3>
-<h4 class="alert title">Alert: You have unread messages</h4>
+<div class="alert" id="alert"></div>
 
 <h4 class="traffic-title title">Traffic</h4>
 <div id="traffic-nav">
@@ -39,8 +42,123 @@
 <h5 class="traffic-icon">Weekly</h5>
 <h5 class="traffic-icon">Monthly</h5>
 </div>
-<canvas id="line-chart" width="400" height="400"></canvas>
+<!--line chart          --> 
+<canvas id="line-chart" width="350" height="200"></canvas>
+
+<!--daily traffic      --> 
+<h4 class="dailytraffic-title title">Daily Traffic</h4>
+<!--bar chart            --> 
+<canvas id="daily-chart" width="350" height="200"></canvas>
+
+<h4 class="mobileusers-title title">Mobile Users</h4>
+<!--pie chart     --> 
+<canvas id="mobile-chart" width="350" height="200"></canvas>
+<!--Social Stats     --> 
+<h4 class="socialstats-title title">Social Stats</h4>
 
 
+<div class="stat facebook-stat">
+    <img class="icon nav-icon" src="resources/svgs/facebook.svg" alt="facebook icon">
+    <h5>Facebook</h5> <h6>10,320</h6>
+</div>
+
+<div class="stat instagram-stat">
+    <img class="icon nav-icon" src="resources/svgs/instagram.svg" alt="instagram icon">
+    <h5>Instagram</h5> <h6>16,445</h6>
+</div>
+<div class="stat twitter-stat">
+    <img class="icon nav-icon" src="resources/svgs/twitter.svg" alt="twitter icon">
+    <h5>Twitter</h5> <h6>22,189</h6>
+</div>
+<!--New Members     --> 
+<h4 class="newmembers-title title">New Members</h4>
+<div>
+    <img class="icon nav-icon" src="resources/images/member-1.jpg" alt="victoria chambers">
+    <h2>Victoria Chambers</h2>
+    <a href="mailto:victoria.chambers80@example.com"><h2>victoria.chambers80@example.com</h2></a>
+    <h2>10/15/20</h2>
+</div>
+<div>
+    <img class="icon nav-icon" src="resources/images/member-2.jpg" alt="dale byrd">
+    <h2>Dale Byrd</h2>
+    <a href="mailto:dale.byrd52@example.com"><h2>dale.byrd52@example.com</h2></a>
+    <h2>10/15/20</h2>
+</div>
+</div>
+<div>
+    <img class="icon nav-icon" src="resources/images/member-3.jpg" alt="dawn wood">
+    <h2>Dawn Wood</h2>
+    <a href="mailto:dawn.wood16@example.com"><h2>dawn.wood16@example.com</h2></a>
+    <h2>10/15/20</h2>
+</div>
+<div>
+    <img class="icon nav-icon" src="resources/images/member-4.jpg" alt="dan oliver">
+    <h2>Dan Oliver</h2>
+    <a href="mailto:dan.oliver82@example.com"><h2>dan.oliver82@example.com</h2></a>
+    <h2>10/15/20</h2>
+</div>
+<!--Recent Activity    --> 
+<h4 class="recentactivity-title title">Recent Activity</h4>
+
+<div>
+    <img class="icon nav-icon" src="resources/images/member-1.jpg" alt="victoria chambers">
+    <h2>Victoria Chambers commented on Web Apps CEO Tips</h2>
+    <h2 class="comment-date">4 hours ago</h2>
+</div>
+
+<div>
+    <img class="icon nav-icon" src="resources/images/member-1.jpg" alt="victoria chambers">
+    <h2>Victoria Chambers commented on Web Apps CEO Tips</h2>
+    <h2 class="comment-date">4 hours ago</h2>
+</div>
+
+<div>
+    <img class="icon nav-icon" src="resources/images/member-1.jpg" alt="victoria chambers">
+    <h2>Victoria Chambers commented on Web Apps CEO Tips</h2>
+    <h2 class="comment-date">4 hours ago</h2>
+</div>
+
+<div>
+    <img class="icon nav-icon" src="resources/images/member-1.jpg" alt="victoria chambers">
+    <h2>Victoria Chambers commented on Web Apps CEO Tips</h2>
+    <h2 class="comment-date">4 hours ago</h2>
+</div>
+<!--message user-->
+<h4 class="messageuser-title title">Message User</h4>
+<div>
+    <input class="input search-input" type="text" placeholder="Search for User">
+    <input class="input message-input" type="text" placeholder="Message for User">
+    <button type="submit">Send</button>
+</div>
+<!--settings-->
+<h4 class="settings-title title">Settings</h4>
+    <div>
+        <h4>Send Email Notifications</h4>
+    <!--email toggle switch-->
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </label>
+  
+<!---->
+<h4>Set Profile to Public</h4>
+<!--profile toggle switch-->
+    <label class="switch">
+     <input type="checkbox">
+     <span class="slider round"></span>
+    </label>
+<!---->
+
+<!--timezone-->
+<select class="form-field" id="timezone">
+    <option disabled selected>Select a Timezone</option>
+    <option>Eastern</option>
+    <option>Western</option>
+    <option>Southern</option>
+    <option>Northern</option>
+ </select>
+ <button class="button-one" id="save">Save</button>
+ <button class="button-two" id="cancel">Cancel</button>
+</div>
 </body>
 </html>
