@@ -1,0 +1,119 @@
+/*STAY ORGANIZED*/
+/* */
+/*main styles*/
+*{
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.line-break {
+    border-right: solid #848cb4 2px;
+    margin-right: -10px;
+    padding-left: 10px;
+    height: 60%;
+    align-self: center;
+  }
+.icon {
+    max-height: 30px;
+    border-radius: 70%;
+    }
+/*header*/
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #7874c4;
+    color:white;
+    min-height: 50px;
+}
+.webapp{
+    font-size: 20px;
+}
+.studentname{
+    font-size: 15px;
+}
+.bell-icon{
+    max-height: 25px;
+    max-width: 25px;
+}
+.member-1-header{
+    min-height: 40px;
+    min-width: 35px;
+}
+/*navigation menu*/
+.grid-item-2{
+    background-size: auto;
+    background-color:#3d1c71 ;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/*alert box*/
+.alert-banner {
+    display: flex;
+    flex-direction: row;
+    height: 30px;                     
+    background-color: #7874c4;
+    color: white;
+    padding: 5px 20px;
+    font-size: 15px;
+    margin: 12px;
+    margin-left: 13px;
+    margin-right: 17px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .alert-banner-close {
+     margin-left: auto;  
+  }
+  /*traffic*/
+  .traffic-title{
+      padding-bottom: 10px;
+  }
+  #traffic-nav{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+  }
+  .dailytraffic-title,
+  .mobileusers-title,
+  .socialstats-title{
+      padding-bottom: 10px;
+      padding-top: 10px;
+  }
+  /*stats*/
+  .facebook-stat{
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+  }
+  .facebook-grid-item-1{
+      display: flex;
+      justify-content: center;
+  }
+  .facebook-grid-item-2{
+      justify-content: center;
+      align-self: center;
+  }
+  .facebook-stat{
+      color: #7874c4;
+      font-size: 20px;
+  }
+  .facebook-number{
+      color: grey;
+      font-size: 35px;
+  }
+  .stat{
+      margin: 15px;
+      border-radius: 10%;
+      min-height: 30px;
+      border: 1px black solid;
+  }
+  .stat-icon{
+      min-width: 40px;
+      min-height:60px;
+  }

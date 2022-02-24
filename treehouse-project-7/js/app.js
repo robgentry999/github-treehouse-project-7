@@ -8,7 +8,7 @@ alertBanner.innerHTML =
   <p class="alert-banner-close">x</p> 
  </div>
 `;
-
+//closes when x button
 alertBanner.addEventListener('click', e => {
   const element = e.target;
   if (element.classList.contains("alert-banner-close")) {

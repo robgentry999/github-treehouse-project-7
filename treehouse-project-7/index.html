@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/newstyles.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" 
     integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
     crossorigin="anonymous" 
@@ -18,56 +18,80 @@
 </head>
 <body>
 <!--header     --> 
-<header>
-<h1>WebApp&trade;</h1>
-<img class="icon" src="resources/svgs/bell.svg" alt="notifications">
-<img class="icon" src="resources/images/member-1.jpg" alt="member-1">
-<h3>Student Name</h3>
-</header>
-<!--main navigation --> 
-<div id="main-nav">
-<img class="icon nav-icon" src="resources/svgs/home.svg" alt="home">
-<img class="icon nav-icon" src="resources/svgs/bar-chart.svg" alt="bar-chart">
-<img class="icon nav-icon" src="resources/svgs/members.svg" alt="members">
-<img class="icon nav-icon" src="resources/svgs/settings.svg" alt="settings">
-</div>
+<div id="grid-container">
+    <div class='grid-item grid-item-1'>
+     <header>
+     <h1 class="webapp">WebApp&trade;</h1>
+     <img class="icon bell-icon" src="resources/svgs/bell.svg" alt="notifications">
+     <img class="icon member-1-header" src="resources/images/member-1.jpg" alt="member-1">
+     <h3 class="studentname">Student Name</h3>
+     </header>
+    </div>
+ <!--main navigation --> 
+    <div class="grid-item grid-item-2">
+     <img class="icon nav-icon" src="resources/svgs/home.svg" alt="home">
+     <img class="icon nav-icon" src="resources/svgs/bar-chart.svg" alt="bar-chart">
+     <img class="icon nav-icon" src="resources/svgs/members.svg" alt="members">
+     <img class="icon nav-icon" src="resources/svgs/settings.svg" alt="settings">
+    </div>
 <!--Dashboard --> 
-<h3 class="dashboard-title title">Dashboard</h3>
-<div class="alert" id="alert"></div>
-
-<h4 class="traffic-title title">Traffic</h4>
-<div id="traffic-nav">
-<h5 class="traffic-icon">Hourly</h5>
-<h5 class="traffic-icon">Daily</h5>
-<h5 class="traffic-icon">Weekly</h5>
-<h5 class="traffic-icon">Monthly</h5>
+<div class="grid-item grid-item-3">
+    <h3 class="dashboard-title title">Dashboard</h3>
 </div>
+<!--alert-->
+<div class="grid-item grid-item-4">
+<div class="alert" id="alert"></div>
+</div>
+<!--traffic-->
+<div class="grid-item grid-item-5">
+    <h4 class="traffic-title title">Traffic</h4>
+<div id="traffic-nav">
+    <h5 class="traffic-icon">Hourly</h5>
+    <h5 class="traffic-icon">Daily</h5>
+    <h5 class="traffic-icon">Weekly</h5>
+    <h5 class="traffic-icon">Monthly</h5>
+</div>
+</div>
+
 <!--line chart          --> 
-<canvas id="line-chart" width="350" height="200"></canvas>
+<div class="grid-item grid-item-6">
+    <canvas id="line-chart" width="350" height="200"></canvas>
+</div>
 
 <!--daily traffic      --> 
-<h4 class="dailytraffic-title title">Daily Traffic</h4>
-<!--bar chart            --> 
-<canvas id="daily-chart" width="350" height="200"></canvas>
+<div class="grid-item grid-item-7">
+    <h4 class="dailytraffic-title title">Daily Traffic</h4>
+</div>
 
-<h4 class="mobileusers-title title">Mobile Users</h4>
+<!--bar chart            --> 
+<div class="grid-item grid-item-8">
+    <canvas id="daily-chart" width="350" height="200"></canvas>
+</div>
 <!--pie chart     --> 
-<canvas id="mobile-chart" width="350" height="200"></canvas>
+<div class="grid-item grid-item-8">
+    <h4 class="mobileusers-title title">Mobile Users</h4>
+    <canvas id="mobile-chart" width="350" height="200"></canvas>
+</div>
 <!--Social Stats     --> 
 <h4 class="socialstats-title title">Social Stats</h4>
 
 
 <div class="stat facebook-stat">
-    <img class="icon nav-icon" src="resources/svgs/facebook.svg" alt="facebook icon">
-    <h5>Facebook</h5> <h6>10,320</h6>
+    <div class="facebook-grid-item-1"> 
+    <img class="icon stat-icon" src="resources/svgs/facebook.svg" alt="facebook icon">
+    </div>
+    <div class="facebook-grid-item-2">
+    <h5 class="facebook-stat">Facebook</h5>
+   <h6 class="facebook-number">10,320</h6>
+    </div>
 </div>
 
 <div class="stat instagram-stat">
-    <img class="icon nav-icon" src="resources/svgs/instagram.svg" alt="instagram icon">
+    <img class="icon stat-icon" src="resources/svgs/instagram.svg" alt="instagram icon">
     <h5>Instagram</h5> <h6>16,445</h6>
 </div>
 <div class="stat twitter-stat">
-    <img class="icon nav-icon" src="resources/svgs/twitter.svg" alt="twitter icon">
+    <img class="icon stat-icon" src="resources/svgs/twitter.svg" alt="twitter icon">
     <h5>Twitter</h5> <h6>22,189</h6>
 </div>
 <!--New Members     --> 
@@ -159,6 +183,7 @@
  </select>
  <button class="button-one" id="save">Save</button>
  <button class="button-two" id="cancel">Cancel</button>
+</div>
 </div>
 </body>
 </html>
