@@ -19,7 +19,8 @@
     }
 /*header*/
 header{
-    display: flex;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 2fr;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
@@ -28,14 +29,28 @@ header{
     min-height: 50px;
 }
 .webapp{
+    margin-left: 5px;
     font-size: 20px;
 }
 .studentname{
-    font-size: 15px;
+    font-size: 12px;
 }
 .bell-icon{
     max-height: 25px;
     max-width: 25px;
+    margin: 0;
+    padding-right: 1em;
+    height: 70%;
+    fill: white;
+    transform-origin: 50% 0;
+    transform-box: fill-box;
+}
+.bell-icon:hover {
+    fill: white;
+    animation: jingle .3s ease-in-out;
+}
+a:visited{
+    fill: white;
 }
 .member-1-header{
     min-height: 40px;
@@ -45,8 +60,8 @@ header{
 .grid-item-2{
     background-size: auto;
     background-color:#3d1c71 ;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -56,7 +71,7 @@ header{
 .alert-banner {
     display: flex;
     flex-direction: row;
-    height: 30px;                     
+    height: 30px;                   
     background-color: #7874c4;
     color: white;
     padding: 5px 20px;
@@ -64,7 +79,7 @@ header{
     margin: 12px;
     margin-left: 13px;
     margin-right: 17px;
-    border-radius: 5px;
+    border-radius: 5%;
     cursor: pointer;
   }
   
@@ -74,12 +89,14 @@ header{
   /*traffic*/
   .traffic-title{
       padding-bottom: 10px;
+      margin-left: 5px;
   }
   #traffic-nav{
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
   }
+  .dashboard-title,
   .dailytraffic-title,
   .mobileusers-title,
   .socialstats-title,
@@ -89,6 +106,7 @@ header{
   .settings-title{
       padding-bottom: 10px;
       padding-top: 10px;
+      margin-left: 5px;
   }
   /*stats*/
   .facebook-stat{
@@ -132,9 +150,10 @@ header{
      justify-items: center;
  }
  .nav-icon{
-     min-height: 50px;
-     min-width: 50px;
+     min-height: 35px;
+     min-width: 35px;
      padding: 7px;
+     fill: white;
  }
  .email{
     text-decoration: none;
@@ -164,10 +183,6 @@ header{
 .message-input{
     min-height: 100px;
 }
-.message-input::-webkit-input-placeholder{
-   vertical-align: text-top;
-   color: red;
-}
 .textarea{
     min-width: 85vw;
     min-height: 100px;
@@ -183,15 +198,62 @@ header{
 /*settings*/
 .email-container{
  display: grid;
- grid-template-columns: 3fr 1fr;
- justify-content: space-between;
+ grid-template-columns: 4fr 1fr;
 }
 
 .settings-container{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 7px;
 }
+/*timezone */
+.timezone-select{
+    min-width: 85vw;
+    height:40px;
+    border-radius: 5%;
+    margin-bottom: 10px;
+    background-color: lightgrey;
+}
+.timezone{
+    margin-top: 30px;
+}
+#save,
+#cancel{
+    min-width: 100px;
+    height: 35px;
+    margin: auto 5px;
+    border-radius: 10%;
+}
+#save{
+    background-color: #7874c4;
+    color: white;
+}
+.buttons{
+    align-items: center;
+    justify-content: space-around;
+}
+/*----------- 768 pixels------------------------------*/
+@media screen and (min-width: 768px){
+header{
+    display: grid;
+    grid-template-columns: 10fr 1fr 1fr 2fr;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.grid-item-2{
+    display: flex;
+    flex-direction: column;
+}
+svg{
+    max-width: 20px;
+    max-height: 20px;
+}
+}
+
+
+
 
 /* The slider (code from https://www.w3schools.com/howto/howto_css_switch.asp)*/
 
@@ -199,8 +261,8 @@ header{
 .switch {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 50px;
+    height: 25px;
   }
   
   /* Hide default HTML checkbox */
@@ -226,10 +288,10 @@ header{
   .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
+    height: 15px;
+    width: 15px;
+    left: 5px;
+    bottom: 5px;
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
