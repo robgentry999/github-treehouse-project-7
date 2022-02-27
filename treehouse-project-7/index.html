@@ -18,7 +18,6 @@
 </head>
 <body>
 <!--header     --> 
-<div id="grid-container">
     <div class='grid-item grid-item-1'>
      <header>
      <h1 class="webapp">WebApp&trade;</h1>
@@ -32,6 +31,7 @@
      </header>
     </div>
  <!--main navigation --> 
+ <div class="page-container">
     <div class="grid-item grid-item-2">
     <div class="icon nav-icon">
     <a href="#">
@@ -64,8 +64,9 @@
         </a>
     </div> 
     </div>
-<!--Dashboard --> 
-<div class="grid-item grid-item-3">
+ <!--Dashboard --> 
+ <div class="rest-page">
+  <div class="grid-item grid-item-3">
     <h3 class="dashboard-title title">Dashboard</h3>
 </div>
 <!--alert-->
@@ -75,12 +76,12 @@
 <!--traffic-->
 <div class="grid-item grid-item-5">
     <h4 id="traffic" class="traffic-title title">Traffic</h4>
-<div id="traffic-nav">
+ <div id="traffic-nav">
     <h5 class="traffic-icon">Hourly</h5>
     <h5 class="traffic-icon">Daily</h5>
     <h5 class="traffic-icon">Weekly</h5>
     <h5 class="traffic-icon">Monthly</h5>
-</div>
+ </div>
 </div>
 
 <!--line chart          --> 
@@ -88,24 +89,25 @@
     <canvas id="line-chart" width="350" height="200"></canvas>
 </div>
 
+
 <!--daily traffic      --> 
+<div class="traffic-container">
 <div class="grid-item grid-item-7">
     <h4 class="dailytraffic-title title">Daily Traffic</h4>
-</div>
-
-<!--bar chart            --> 
-<div class="grid-item grid-item-8">
     <canvas id="daily-chart" width="350" height="200"></canvas>
 </div>
-<!--pie chart     --> 
+<!--mobile users    --> 
 <div class="grid-item grid-item-8">
     <h4 class="mobileusers-title title">Mobile Users</h4>
     <canvas id="mobile-chart" width="350" height="200"></canvas>
 </div>
+</div>
+
+
 <!--Social Stats     --> 
 <h4 class="socialstats-title title">Social Stats</h4>
 
-
+<div class="social-stats-container">
 <div class="stat facebook-stat">
     <div class="facebook-grid-item-1"> 
     <img class="icon stat-icon" src="resources/svgs/facebook.svg" alt="facebook icon">
@@ -135,32 +137,32 @@
     <h6 class="facebook-number">22,189</h6>
     </div>
 </div>
+</div>
 <!--New Members     --> 
 <h4 id="newmembers" class="newmembers-title title">New Members</h4>
 <div class="newmembers-container">
     <img class="icon nav-icon" src="resources/images/member-1.jpg" alt="victoria chambers">
-    <h2>Victoria Chambers</h2>
+    <h2 class="name">Victoria Chambers</h2>
     <a class="email" href="mailto:victoria.chambers80@example.com"><h2>victoria.chambers80@example.com</h2></a>
-    <h2>10/15/20</h2>
+    <h2 class="date">10/15/20</h2>
 </div>
 <div class="newmembers-container">
     <img class="icon nav-icon" src="resources/images/member-2.jpg" alt="dale byrd">
-    <h2>Dale Byrd</h2>
+    <h2 class="name">Dale Byrd</h2>
     <a class="email" href="mailto:dale.byrd52@example.com"><h2>dale.byrd52@example.com</h2></a>
-    <h2>10/15/20</h2>
-</div>
+    <h2 class="date">10/15/20</h2>
 </div>
 <div class="newmembers-container">
     <img class="icon nav-icon" src="resources/images/member-3.jpg" alt="dawn wood">
-    <h2>Dawn Wood</h2>
+    <h2 class="name">Dawn Wood</h2>
     <a class="email" href="mailto:dawn.wood16@example.com"><h2>dawn.wood16@example.com</h2></a>
-    <h2>10/15/20</h2>
+    <h2 class="date">10/15/20</h2>
 </div>
 <div class="newmembers-container">
     <img class="icon nav-icon" src="resources/images/member-4.jpg" alt="dan oliver">
-    <h2>Dan Oliver</h2>
+    <h2 class="name">Dan Oliver</h2>
     <a class="email" href="mailto:dan.oliver82@example.com"><h2>dan.oliver82@example.com</h2></a>
-    <h2>10/15/20</h2>
+    <h2 class="date">10/15/20</h2>
 </div>
 <!--Recent Activity    --> 
 <h4 class="recentactivity-title title">Recent Activity</h4>
@@ -242,6 +244,8 @@
  <button id="save">Save</button>
  <button id="cancel">Cancel</button>
  </div>
-
+</div>
+</div>
+</div>
 </body>
 </html>

@@ -134,7 +134,7 @@ a:visited{
       margin: 15px;
       border-radius: 4%;
       min-height: 30px;
-      border: 1px black solid;
+      border: .5px grey solid;
   }
   .stat-icon{
       min-width: 40px;
@@ -242,13 +242,82 @@ header{
     justify-content: space-around;
     align-items: center;
 }
+.page-container{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
 .grid-item-2{
     display: flex;
     flex-direction: column;
+    justify-content:flex-start;
+    grid-column: 1;
+}
+.rest-page{
+    grid-column: 2;
 }
 svg{
-    max-width: 20px;
-    max-height: 20px;
+    max-width: 30px;
+    max-height: 30px;
+}
+.grid-item-5{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#line-chart{
+    max-width: 90vw;
+    margin-left: 5%;
+}
+#daily-chart,
+#mobile-chart{
+    max-width: 35vw;
+    max-height: 150px;
+}
+.traffic-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.grid-item-7{
+    margin-left: 20px;
+}
+/*social stats*/
+.social-stats-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    min-width: 125px;
+    min-height: 30px;
+}
+/*new members*/
+.newmembers-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 0px;
+}
+.nav-icon{
+    min-width: 50px;
+    min-height: 50px;
+    grid-row: span 2;
+}
+.date{
+    grid-column: 3;
+    grid-row: span 2;
+}
+.name,
+.email{
+    text-align: left;
+    grid-column: 2;
+    align-items: flex-start;
+}
+/*recent activity*/
+.recentactivity-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.nav-icon{
+    grid-column: 1;
+}
+.recent-text,
+.comment-date{
+    grid-column: 2;
 }
 }
 
