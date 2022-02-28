@@ -109,3 +109,20 @@ const myChart = new Chart(
     document.getElementById('mobile-chart'),
     config
 );
+
+const user = document.getElementById("userfield");
+const message = document.getElementById("messagefield");
+const send = document.getElementById("send");
+
+send.addEventListener('click', () => {
+    
+    if (user.value === "" && message.value === "") {
+        alert("Please fill out user and message fields before sending");
+      } else if (user.value === "" ) {
+        alert("Please fill out user field before sending");
+      } else if (message.value === "") {
+        alert("Please fill out message field before sending");
+      } else {
+        alert(`Message successfully sent to: ${user.value}`);
+      }
+});
