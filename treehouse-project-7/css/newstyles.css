@@ -58,9 +58,10 @@ header{
     fill: white;
     transform-origin: 50% 0;
     transform-box: fill-box;
+    margin-bottom: 12px;
 }
 .bell-icon:hover {
-    fill: white;
+    fill: red;
     animation: jingle .3s ease-in-out;
 }
 a:visited{
@@ -81,12 +82,13 @@ a:visited{
     justify-content: space-evenly;
 }
 .notification-dot {
-    background: rgb(120, 245, 70);
+    background: white;
     opacity: 0;
     transition: all 0.3s ease-in;
     height: 8px;
     width: 8px;
     border-radius: 50%;
+    margin-left: 20px
 }
 /*alert box*/
 .alert-banner {
@@ -158,9 +160,19 @@ a:visited{
   }
   .stat-icon{
       padding: 10px;
-      min-width: 60px;
-      min-height:60px;
+      min-width: 50px;
+      min-height:50px;
   }
+  .socials {
+    background-color: rgb(116, 119, 191);
+    border-radius: 50%;
+    margin: auto 5%;
+}
+
+.socials path {
+    fill: white;
+    max-width: 30px;
+}
   /*new members*/
  .newmembers-container,
  .recentactivity-container{
@@ -225,8 +237,11 @@ a:visited{
 }
 /*settings*/
 .email-container{
+align-self: baseline;
  display: grid;
  grid-template-columns: 4fr 1fr;
+ grid-template-rows: 30px 30px;
+ margin-left: 5px;
 }
 .slider{
     grid-column: 2;
@@ -237,6 +252,12 @@ a:visited{
     flex-direction: column;
     align-items: center;
     margin: 7px;
+}
+.email-grid-item-1{
+    align-self: baseline;
+}
+.emailnoti{
+    margin-left: 5px;
 }
 /*timezone */
 .timezone-select{
@@ -361,8 +382,13 @@ svg{
 .recent-text,
 .comment-date{
     justify-self: left;
-    align-self:baseline;
     grid-column: 2;
+}
+.recent-text{
+    align-self: center;
+}
+.comment-date{
+    align-self: baseline;
 }
 /*message user*/
 .textarea{
