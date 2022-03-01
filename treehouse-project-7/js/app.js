@@ -15,7 +15,11 @@ alertBanner.addEventListener('click', e => {
     alertBanner.style.display = "none";
   }
 });
-
+//notification dott
+setTimeout(() => {
+    const dot = document.querySelector(".notification-dot");
+    dot.style.opacity = 1;
+}, 2000)
 //traffic chart
 const CHART = document.getElementById('line-chart');
 let lineChart = new Chart (CHART, {

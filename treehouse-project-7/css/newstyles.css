@@ -12,13 +12,21 @@ textarea::placeholder {
   color: #C7c7c7;
   padding: 10px;
 }
-.line-break {
-    border-right: solid #848cb4 2px;
-    margin-right: -10px;
-    padding-left: 10px;
-    height: 60%;
-    align-self: center;
-  }
+.long-hr{
+    margin-top: 7px;
+    margin-bottom: 7px;
+    color: lightgrey;
+}
+.short-hr{
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: lightgrey;
+}
+.social-long-hr{
+    margin-top: 10px;
+    color: lightgrey;
+}
 .icon {
     max-height: 30px;
     border-radius: 70%;
@@ -72,7 +80,14 @@ a:visited{
     flex-direction: row;
     justify-content: space-evenly;
 }
-
+.notification-dot {
+    background: rgb(120, 245, 70);
+    opacity: 0;
+    transition: all 0.3s ease-in;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+}
 /*alert box*/
 .alert-banner {
     display: flex;
@@ -142,12 +157,14 @@ a:visited{
       border: .5px grey solid;
   }
   .stat-icon{
-      min-width: 40px;
+      padding: 10px;
+      min-width: 60px;
       min-height:60px;
   }
   /*new members*/
  .newmembers-container,
  .recentactivity-container{
+     margin-top: 10px;
      display: flex;
      font-size: 10px;
      flex-direction: column;
@@ -191,6 +208,12 @@ a:visited{
     min-width: 85vw;
     min-height: 100px;
 }
+.recent-text{
+    justify-self: left;
+}
+.comment-date{
+    width: 100px;
+}
 .send-button{
     color: white;
     min-width: 85vw;
@@ -198,13 +221,17 @@ a:visited{
     margin-top: 10px;
     height: 25px;
     border-radius: 7%;
+    margin-bottom: 10px;
 }
 /*settings*/
 .email-container{
  display: grid;
  grid-template-columns: 4fr 1fr;
 }
-
+.slider{
+    grid-column: 2;
+    grid-row: 1;
+}
 .settings-container{
     display: flex;
     flex-direction: column;
@@ -244,6 +271,9 @@ a:visited{
 }
 /*----------- 768 pixels------------------------------*/
 @media screen and (min-width: 768px){
+.long-hr{
+    display: none;
+}
 header{
     display: grid;
     grid-template-columns: 10fr 1fr 1fr 2fr;
